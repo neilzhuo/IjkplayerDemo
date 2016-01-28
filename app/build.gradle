@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.neilzhuo.ijkplayerdemo"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets.main {
+        jniLibs.srcDirs 'libs'
+        jni.srcDirs = [] // This prevents the auto generation of Android.mk
+    }
+}
+
+dependencies {
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    compile(name: 'ijkplayer-exo-debug', ext: 'aar')
+    compile(name: 'ijkplayer-java-debug', ext: 'aar')
+    compile(name: 'ijkplayer-sample-all32-debug', ext: 'aar')
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:preference-v7:23.0.1'
+    compile 'com.android.support:support-annotations:23.0.1'
+
+    compile 'com.squareup:otto:1.3.8'
+
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+}

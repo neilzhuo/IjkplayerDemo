@@ -14,8 +14,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void clickHandler(View source)
+    public void clickHandlerOfPlayInNativeView(View source)
     {
         VideoActivity.intentTo(this, "/mnt/sdcard/test.mp4", "test");
+    }
+
+    public void clickHandlerOfPlayInPrivateView(View source)
+    {
+        PlayerActivity.intentTo(this, "/mnt/sdcard/test.mp4", "test");
     }
 }

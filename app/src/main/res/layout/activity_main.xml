@@ -17,11 +17,21 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click to play video"
-        android:id="@+id/button"
+        android:text="Click to play video in native view"
+        android:id="@+id/buttonNative"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="45dp"
-        android:onClick="clickHandler" />
+        android:onClick="clickHandlerOfPlayInNativeView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click to play video in private view"
+        android:id="@+id/buttonPrivate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="100dp"
+        android:onClick="clickHandlerOfPlayInPrivateView" />
 
 </RelativeLayout>

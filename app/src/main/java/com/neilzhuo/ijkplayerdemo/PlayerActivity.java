@@ -118,7 +118,7 @@ public class PlayerActivity extends AppCompatActivity implements TracksFragment.
         mTextView.setMovementMethod(new ScrollingMovementMethod());
 
         mTextView.setText("仔细看完这个视频，然后回答以下问题：\n");
-        mTextView.append("1. 猫被抓住了吗?");
+        mTextView.append("1. 猫和狗成为好朋友了吗?");
     }
 
     @Override

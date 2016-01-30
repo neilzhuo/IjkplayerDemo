@@ -15,23 +15,36 @@
         android:text="/mnt/sdcard/test.mp4" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Click to play video in native view"
         android:id="@+id/buttonNative"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="45dp"
-        android:onClick="clickHandlerOfPlayInNativeView" />
+        android:layout_marginTop="60dp"
+        android:onClick="clickHandlerOfPlayInNativeView"
+        android:background="@drawable/shape" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Click to play video in private view"
         android:id="@+id/buttonPrivate"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="100dp"
-        android:onClick="clickHandlerOfPlayInPrivateView" />
+        android:layout_marginTop="120dp"
+        android:onClick="clickHandlerOfPlayInPrivateView"
+        android:background="@drawable/shape" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click to open native Ijkplayer"
+        android:id="@+id/buttonIjkplayer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="180dp"
+        android:onClick="clickHandlerOfOpenIjkplayer"
+        android:background="@drawable/shape" />
 
 </RelativeLayout>

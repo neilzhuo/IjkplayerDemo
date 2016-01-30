@@ -15,9 +15,8 @@ This project setup steps are described as below:
  - Gradle 2.8
 
 ### Build ijkplayer ffmpeg libs and aar (ijkplayer-java and ijkplayer-exo) libs
-- Follow instructions [ijkplayer](https://github.com/Bilibili/ijkplayer) to build on Linux. 
+- Follow instructions [ijkplayer](https://github.com/Bilibili/ijkplayer) to build on Linux. Don't waste time to do that in windows.
 - Just need to change "git checkout -B latest K0.4.4.1" to "git checkout -b ...". Need to modify this in file "init-android.sh" too.
-- Don't waste time to do that in windows.
 - ijkplayer-java based on ffplay.
 - ijkplayer-Exo based on android exoplayer.
 
@@ -37,7 +36,7 @@ ext {
 ```
 - Select "Build->Make Project", build whole ijkplayer project, include:
 - ijkplayer-exo: using android ExoPlayer.
-- ijkplayer-java: using ffplay.
+- ijkplayer-java: based on ffplay.
 - ijkplayer-sample: A ijkplayer demo (APK).
 
 Install apk to mobile to check whether everything is OK before going next.
@@ -78,7 +77,7 @@ to:
 ```
 
 - Select "Build->Make Module 'ijkplayer-sample'".
-- aar file would be generated in "F:\ijkplayer-android\android\ijkplayer\ijkplayer-sample\build\outputs\aar".
+- aar file would be generated in folder "F:\ijkplayer-android\android\ijkplayer\ijkplayer-sample\build\outputs\aar\".
 
 ### Build IjkplayerDemo
-New my android project, copy lib files (include aar and .so) into "IjkplayerDemo\app\libs" (.aar) and "IjkplayerDemo\app\libs\armeabi-v7a" (.so).
+New an android project, copy lib files (include aar and .so) into "IjkplayerDemo\app\libs" (.aar) and "IjkplayerDemo\app\libs\armeabi-v7a" (.so).
